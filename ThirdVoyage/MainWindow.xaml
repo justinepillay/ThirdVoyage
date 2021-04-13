@@ -1,0 +1,78 @@
+﻿<Window x:Class="ThirdVoyage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThirdVoyage"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Background="#111621">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="The Great Memento Confusion"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" 
+               Foreground="White" FontFamily="Century Gothic"
+                 FontSize="24" />
+
+        
+        <Button Grid.Row="0" Grid.Column="1" Name="btnUndo" Background="#80cfd4" Margin="10,0,20,0"
+                VerticalAlignment="center" Foreground="white" Height="30" Width="50" BorderThickness="1.5" Content="Undo"
+                BorderBrush="White" FontSize="10" FontFamily="Century Gothic" Click="btnUndo_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+
+                    <Setter Property="CornerRadius" Value="15"/>
+
+                </Style>
+
+            </Button.Resources>
+
+        </Button>
+
+
+        
+
+        <Button Grid.Row="0" Grid.Column="3" Name="btnSave" Background="#80cfd4" Margin="10,0,20,0"
+                VerticalAlignment="center" Foreground="white" Height="30" Width="50" BorderThickness="1.5" Content="Save"
+                BorderBrush="White" FontSize="10" FontFamily="Century Gothic" Click="btnSave_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+
+                    <Setter Property="CornerRadius" Value="15"/>
+
+                </Style>
+
+            </Button.Resources>
+
+        </Button>
+
+
+        <TextBox 
+            x:Name="txbContent"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Grid.ColumnSpan="4"
+            Grid.Row="1" 
+            Margin="10, 5"
+            TextWrapping="Wrap" 
+            AcceptsReturn="True" 
+            AcceptsTab="True" 
+             />
+
+       
+    </Grid>
+</Window>
