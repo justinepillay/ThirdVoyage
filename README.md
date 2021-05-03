@@ -2,4 +2,4 @@
 Mementos. Behavioural Design Pattern
 
 
-A "text editor" app that undos chnages to the text box.
+A "text editor" app that undos changes to the text box.
